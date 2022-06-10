@@ -1,0 +1,6 @@
+D:\ToolBox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/ToolBox/apps/CLion/ch-0/221.5787.29/bin/ninja/win/ninja.exe -G Ninja -S "D:\cppprograme\objectorintedproject\project\Project test" -B "D:\cppprograme\objectorintedproject\project\Project test\cmake-build-debug"
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Using Win32 for window creation
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug
