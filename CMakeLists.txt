@@ -12,7 +12,7 @@ set(MyIncludes  include/Shader
 
 
 
-add_executable(${PROJECT_NAME}  src/Ch3_Texture/texture_Rectangle.cpp
+add_executable(${PROJECT_NAME}  src/Ch4_CoordinateSystem/GoingTo3D.cpp
                                 ${Shaders}
                                 vendor/glad.c
         )

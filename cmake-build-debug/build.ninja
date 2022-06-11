@@ -49,12 +49,12 @@ cmake_ninja_workdir = D$:/cppprograme/objectorintedproject/project/Project$ test
 
 build cmake_object_order_depends_target_Project_test: phony || cmake_object_order_depends_target_glfw
 
-build CMakeFiles/Project_test.dir/src/Ch3_Texture/texture_Rectangle.cpp.obj: CXX_COMPILER__Project_test_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Ch3_Texture/texture_Rectangle.cpp || cmake_object_order_depends_target_Project_test
-  DEP_FILE = CMakeFiles\Project_test.dir\src\Ch3_Texture\texture_Rectangle.cpp.obj.d
+build CMakeFiles/Project_test.dir/src/Ch4_CoordinateSystem/GoingTo3D.cpp.obj: CXX_COMPILER__Project_test_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Ch4_CoordinateSystem/GoingTo3D.cpp || cmake_object_order_depends_target_Project_test
+  DEP_FILE = CMakeFiles\Project_test.dir\src\Ch4_CoordinateSystem\GoingTo3D.cpp.obj.d
   FLAGS = -g -std=gnu++20
   INCLUDES = -I"D:/cppprograme/objectorintedproject/project/Project test/vendor" -I"D:/cppprograme/objectorintedproject/project/Project test/include" -I"D:/cppprograme/objectorintedproject/project/Project test/vendor/glfw/include"
   OBJECT_DIR = CMakeFiles\Project_test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Project_test.dir\src\Ch3_Texture
+  OBJECT_FILE_DIR = CMakeFiles\Project_test.dir\src\Ch4_CoordinateSystem
 
 build CMakeFiles/Project_test.dir/src/Shaders/Shader.cpp.obj: CXX_COMPILER__Project_test_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Shaders/Shader.cpp || cmake_object_order_depends_target_Project_test
   DEP_FILE = CMakeFiles\Project_test.dir\src\Shaders\Shader.cpp.obj.d
@@ -85,7 +85,7 @@ build CMakeFiles/Project_test.dir/vendor/glad.c.obj: C_COMPILER__Project_test_De
 #############################################
 # Link the executable Project_test.exe
 
-build Project_test.exe: CXX_EXECUTABLE_LINKER__Project_test_Debug CMakeFiles/Project_test.dir/src/Ch3_Texture/texture_Rectangle.cpp.obj CMakeFiles/Project_test.dir/src/Shaders/Shader.cpp.obj CMakeFiles/Project_test.dir/src/Shaders/ShaderProgram.cpp.obj CMakeFiles/Project_test.dir/vendor/glad.c.obj | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
+build Project_test.exe: CXX_EXECUTABLE_LINKER__Project_test_Debug CMakeFiles/Project_test.dir/src/Ch4_CoordinateSystem/GoingTo3D.cpp.obj CMakeFiles/Project_test.dir/src/Shaders/Shader.cpp.obj CMakeFiles/Project_test.dir/src/Shaders/ShaderProgram.cpp.obj CMakeFiles/Project_test.dir/vendor/glad.c.obj | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
   FLAGS = -g
   LINK_LIBRARIES = vendor/glfw/src/libglfw3.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Project_test.dir

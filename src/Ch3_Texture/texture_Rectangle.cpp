@@ -39,8 +39,8 @@ int main()
     // load and compile shaders, link shader program
     ShaderProgram shaderProgram;
 
-    shaderProgram.CompileAndLink("assets/shaders/ShadersForTexture/vsForTexture.vs",
-                                 "assets/shaders/ShadersForTexture/fsForTexture.fs");
+    shaderProgram.CompileAndLink("assets/shaders/ShadersForTexture/vsForTexture.glsl",
+                                 "assets/shaders/ShadersForTexture/fsForTexture.glsl");
 
 
 
@@ -123,6 +123,8 @@ int main()
 
 
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
 
 	// --------------------------------------------------------------------------------------------
 	// Render Loop
