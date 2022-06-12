@@ -49,12 +49,12 @@ cmake_ninja_workdir = D$:/cppprograme/objectorintedproject/project/Project$ test
 
 build cmake_object_order_depends_target_Minecraft_clone: phony || cmake_object_order_depends_target_glfw
 
-build CMakeFiles/Minecraft_clone.dir/src/Ch4_CoordinateSystem/GoingTo3D.cpp.obj: CXX_COMPILER__Minecraft_clone_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Ch4_CoordinateSystem/GoingTo3D.cpp || cmake_object_order_depends_target_Minecraft_clone
-  DEP_FILE = CMakeFiles\Minecraft_clone.dir\src\Ch4_CoordinateSystem\GoingTo3D.cpp.obj.d
+build CMakeFiles/Minecraft_clone.dir/src/main/Ch5_Lighting/GoingTo3D.cpp.obj: CXX_COMPILER__Minecraft_clone_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/main/Ch5_Lighting/GoingTo3D.cpp || cmake_object_order_depends_target_Minecraft_clone
+  DEP_FILE = CMakeFiles\Minecraft_clone.dir\src\main\Ch5_Lighting\GoingTo3D.cpp.obj.d
   FLAGS = -g -std=gnu++20
   INCLUDES = -I"D:/cppprograme/objectorintedproject/project/Project test/vendor" -I"D:/cppprograme/objectorintedproject/project/Project test/include" -I"D:/cppprograme/objectorintedproject/project/Project test/vendor/glfw/include"
   OBJECT_DIR = CMakeFiles\Minecraft_clone.dir
-  OBJECT_FILE_DIR = CMakeFiles\Minecraft_clone.dir\src\Ch4_CoordinateSystem
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft_clone.dir\src\main\Ch5_Lighting
 
 build CMakeFiles/Minecraft_clone.dir/src/Shaders/Shader.cpp.obj: CXX_COMPILER__Minecraft_clone_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Shaders/Shader.cpp || cmake_object_order_depends_target_Minecraft_clone
   DEP_FILE = CMakeFiles\Minecraft_clone.dir\src\Shaders\Shader.cpp.obj.d
@@ -92,7 +92,7 @@ build CMakeFiles/Minecraft_clone.dir/src/Camera/Camera.cpp.obj: CXX_COMPILER__Mi
 #############################################
 # Link the executable Minecraft_clone.exe
 
-build Minecraft_clone.exe: CXX_EXECUTABLE_LINKER__Minecraft_clone_Debug CMakeFiles/Minecraft_clone.dir/src/Ch4_CoordinateSystem/GoingTo3D.cpp.obj CMakeFiles/Minecraft_clone.dir/src/Shaders/Shader.cpp.obj CMakeFiles/Minecraft_clone.dir/src/Shaders/ShaderProgram.cpp.obj CMakeFiles/Minecraft_clone.dir/vendor/glad.c.obj CMakeFiles/Minecraft_clone.dir/src/Camera/Camera.cpp.obj | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
+build Minecraft_clone.exe: CXX_EXECUTABLE_LINKER__Minecraft_clone_Debug CMakeFiles/Minecraft_clone.dir/src/main/Ch5_Lighting/GoingTo3D.cpp.obj CMakeFiles/Minecraft_clone.dir/src/Shaders/Shader.cpp.obj CMakeFiles/Minecraft_clone.dir/src/Shaders/ShaderProgram.cpp.obj CMakeFiles/Minecraft_clone.dir/vendor/glad.c.obj CMakeFiles/Minecraft_clone.dir/src/Camera/Camera.cpp.obj | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
   FLAGS = -g
   LINK_LIBRARIES = vendor/glfw/src/libglfw3.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Minecraft_clone.dir

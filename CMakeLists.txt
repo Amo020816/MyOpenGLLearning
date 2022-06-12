@@ -9,7 +9,7 @@ set(Shaders src/Shaders/Shader.cpp
 
 set(Camera src/Camera/Camera.cpp)
 
-add_executable(${PROJECT_NAME}  src/Ch4_CoordinateSystem/GoingTo3D.cpp
+add_executable(${PROJECT_NAME}  src/main/Ch5_Lighting/GoingTo3D.cpp
                                 ${Shaders}
                                 vendor/glad.c
                                 ${Camera}
