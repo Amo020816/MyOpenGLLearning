@@ -1,4 +1,4 @@
-D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug/CMakeFiles/Project_test.dir
+D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug/CMakeFiles/Minecraft_clone.dir
 D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug/CMakeFiles/edit_cache.dir
 D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug/CMakeFiles/list_install_components.dir

@@ -1,12 +1,28 @@
 #include <Core.h>
-#include <Shader/Shader.h>
 #include <Shader/ShaderProgram.h>
+#include <Camera/Camera.h>
 // stb
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb/stb_image.h>
 
-void framebuffer_size_callback(GLFWwindow*, int, int);
+// deltaTime
+float deltaTime = 0.0f;     // Time between current frame and last frame
+float lastFrame = 0.0f;     // Time of last frame
+
+int window_width = 800;
+int window_height = 600;
+
+const glm::vec3 Camera::world_up = glm::vec3(0.0f, 1.0f, 0.0f);
+Camera camera( (float)window_width, (float)window_height);
+
+
+void FrameBufferSizeCallBack(GLFWwindow*, int, int);
+void MouseMovementCallBack(GLFWwindow*, double, double);
+void MouseScrollCallBack(GLFWwindow*, double, double);
+
 void processInput(GLFWwindow*);
+
+
 
 int main()
 {
@@ -17,15 +33,17 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);					// set glfw context version to 3.3
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);	// activate glfw core mode
 
-    GLFWwindow* RectangelWindow = glfwCreateWindow(800, 600, "Rectangle with EBO", NULL, NULL);	// create a window
-    if (RectangelWindow == NULL)
+    GLFWwindow* window = glfwCreateWindow(window_width, window_height, "Rectangle with EBO", NULL, NULL);	// create a window
+    if (window == nullptr)
     {
         std::cout << "Failed to create a glfw window" << std::endl;
         glfwTerminate();
         return -1;
     }
-    glfwMakeContextCurrent(RectangelWindow);
-    glfwSetFramebufferSizeCallback(RectangelWindow, framebuffer_size_callback);
+    glfwMakeContextCurrent(window);
+    glfwSetFramebufferSizeCallback(window, FrameBufferSizeCallBack);
+    glfwSetCursorPosCallback(window, MouseMovementCallBack);
+    glfwSetScrollCallback(window, MouseScrollCallBack);
 
     // --------------------------------------------------------------------------------------------
     // glad : load all GLFW function pointers
@@ -171,12 +189,33 @@ int main()
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glEnable(GL_DEPTH_TEST);
 
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+    glm::vec3 cubePositions[] = {
+            glm::vec3( 0.0f,  0.0f,  0.0f),
+            glm::vec3( 2.0f,  5.0f, -15.0f),
+            glm::vec3(-1.5f, -2.2f, -2.5f),
+            glm::vec3(-3.8f, -2.0f, -12.3f),
+            glm::vec3( 2.4f, -0.4f, -3.5f),
+            glm::vec3(-1.7f,  3.0f, -7.5f),
+            glm::vec3( 1.3f, -2.0f, -2.5f),
+            glm::vec3( 1.5f,  2.0f, -2.5f),
+            glm::vec3( 1.5f,  0.2f, -1.5f),
+            glm::vec3(-1.3f,  1.0f, -1.5f)
+    };
+
+
     // --------------------------------------------------------------------------------------------
     // Render Loop
-    while (!glfwWindowShouldClose(RectangelWindow))
+    while (!glfwWindowShouldClose(window))
     {
+        // calculate delta time
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
+
         // input
-        processInput(RectangelWindow);
+        processInput(window);
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         // drawing
@@ -185,26 +224,34 @@ int main()
         glBindTexture(GL_TEXTURE_2D, mytexture);
         glBindVertexArray(VAO_rectangle);
 
-        glm::mat4 model = glm::mat4(1.0f);  // model matrix
-        model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
-        glm::mat4 view = glm::mat4(1.0f);
-        view = glm::translate( view, glm::vec3(0.0f, 0.0f, -3.0f));
-        glm::mat4 projection;
-        projection = glm::perspective( glm::radians( 45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
+        glm::mat4 view = glm::lookAt(  camera.GetCameraPos()
+                ,camera.GetCameraPos() + camera.GetCameraFront()
+                ,camera.GetCameraUp());
 
-        shaderProgram.UploadMat4("model", model);
+        glm::mat4 projection;
+        projection = glm::perspective( glm::radians( camera.GetFov()), 800.0f / 600.0f, 0.1f, 100.0f);
+
         shaderProgram.UploadMat4("view", view);
         shaderProgram.UploadMat4("projection", projection);
 
-        //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        for (uint32 i = 0; i < 10; i++)
+        {
+            glm::mat4 model = glm::mat4(1.0f);  // model matrix
+            model = glm::translate(model, cubePositions[i]);
+            float angle = 20.0f * i;
+            model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+            shaderProgram.UploadMat4("model", model);
+            //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+
+        }
 
 
         glBindVertexArray(0);
 
         // check and call events, swap buffers
         glfwPollEvents();
-        glfwSwapBuffers(RectangelWindow);
+        glfwSwapBuffers(window);
     }
 
     glDeleteBuffers(1, &VBO_rectangle);
@@ -215,13 +262,42 @@ int main()
     return 0;
 }
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+void FrameBufferSizeCallBack(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
+}
+
+void MouseMovementCallBack(GLFWwindow* window, double x_pos_in, double y_pos_in)
+{
+  camera.InsMouseMovementCallBack(window, x_pos_in, y_pos_in);
+}
+
+
+void MouseScrollCallBack(GLFWwindow* window, double x_in, double y_in)
+{
+  camera.InsMouseScrollCallBack(window, x_in, y_in);
 }
 
 void processInput(GLFWwindow* window)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+
+  // --------------------------------------------------------------------------------------------
+  // process input for camera moving
+    const float kCameraSpeed = 2.5f * deltaTime;         // 2.5 unit per second (actual displacement)
+
+
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+      camera.CameraMoveBy(FORWARD, kCameraSpeed);
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+      camera.CameraMoveBy(BACKWARD, kCameraSpeed);
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+      camera.CameraMoveBy(RIGHT, kCameraSpeed);
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+      camera.CameraMoveBy(LEFT, kCameraSpeed);
+    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
+      camera.CameraMoveBy(UPWARD, kCameraSpeed);
+    if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
+      camera.CameraMoveBy(DOWNWARD, kCameraSpeed);
 }

@@ -202,7 +202,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project_test
+CMAKE_PROJECT_NAME:STATIC=Minecraft_clone
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=3.3.7
@@ -328,6 +328,15 @@ GLFW_USE_HYBRID_HPG:BOOL=OFF
 
 //Assume the Vulkan loader is linked with the application
 GLFW_VULKAN_STATIC:BOOL=OFF
+
+//Value Computed by CMake
+Minecraft_clone_BINARY_DIR:STATIC=D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug
+
+//Value Computed by CMake
+Minecraft_clone_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Minecraft_clone_SOURCE_DIR:STATIC=D:/cppprograme/objectorintedproject/project/Project test
 
 //Value Computed by CMake
 Project_test_BINARY_DIR:STATIC=D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug

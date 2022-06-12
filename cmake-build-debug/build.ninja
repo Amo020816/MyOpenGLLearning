@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Project_test
+# Project: Minecraft_clone
 # Configurations: Debug
 # =============================================================================
 
@@ -41,59 +41,66 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = D$:/cppprograme/objectorintedproject/project/Project$ test/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Project_test
+# Object build statements for EXECUTABLE target Minecraft_clone
 
 
 #############################################
-# Order-only phony target for Project_test
+# Order-only phony target for Minecraft_clone
 
-build cmake_object_order_depends_target_Project_test: phony || cmake_object_order_depends_target_glfw
+build cmake_object_order_depends_target_Minecraft_clone: phony || cmake_object_order_depends_target_glfw
 
-build CMakeFiles/Project_test.dir/src/Ch4_CoordinateSystem/GoingTo3D.cpp.obj: CXX_COMPILER__Project_test_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Ch4_CoordinateSystem/GoingTo3D.cpp || cmake_object_order_depends_target_Project_test
-  DEP_FILE = CMakeFiles\Project_test.dir\src\Ch4_CoordinateSystem\GoingTo3D.cpp.obj.d
+build CMakeFiles/Minecraft_clone.dir/src/Ch4_CoordinateSystem/GoingTo3D.cpp.obj: CXX_COMPILER__Minecraft_clone_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Ch4_CoordinateSystem/GoingTo3D.cpp || cmake_object_order_depends_target_Minecraft_clone
+  DEP_FILE = CMakeFiles\Minecraft_clone.dir\src\Ch4_CoordinateSystem\GoingTo3D.cpp.obj.d
   FLAGS = -g -std=gnu++20
   INCLUDES = -I"D:/cppprograme/objectorintedproject/project/Project test/vendor" -I"D:/cppprograme/objectorintedproject/project/Project test/include" -I"D:/cppprograme/objectorintedproject/project/Project test/vendor/glfw/include"
-  OBJECT_DIR = CMakeFiles\Project_test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Project_test.dir\src\Ch4_CoordinateSystem
+  OBJECT_DIR = CMakeFiles\Minecraft_clone.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft_clone.dir\src\Ch4_CoordinateSystem
 
-build CMakeFiles/Project_test.dir/src/Shaders/Shader.cpp.obj: CXX_COMPILER__Project_test_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Shaders/Shader.cpp || cmake_object_order_depends_target_Project_test
-  DEP_FILE = CMakeFiles\Project_test.dir\src\Shaders\Shader.cpp.obj.d
+build CMakeFiles/Minecraft_clone.dir/src/Shaders/Shader.cpp.obj: CXX_COMPILER__Minecraft_clone_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Shaders/Shader.cpp || cmake_object_order_depends_target_Minecraft_clone
+  DEP_FILE = CMakeFiles\Minecraft_clone.dir\src\Shaders\Shader.cpp.obj.d
   FLAGS = -g -std=gnu++20
   INCLUDES = -I"D:/cppprograme/objectorintedproject/project/Project test/vendor" -I"D:/cppprograme/objectorintedproject/project/Project test/include" -I"D:/cppprograme/objectorintedproject/project/Project test/vendor/glfw/include"
-  OBJECT_DIR = CMakeFiles\Project_test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Project_test.dir\src\Shaders
+  OBJECT_DIR = CMakeFiles\Minecraft_clone.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft_clone.dir\src\Shaders
 
-build CMakeFiles/Project_test.dir/src/Shaders/ShaderProgram.cpp.obj: CXX_COMPILER__Project_test_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Shaders/ShaderProgram.cpp || cmake_object_order_depends_target_Project_test
-  DEP_FILE = CMakeFiles\Project_test.dir\src\Shaders\ShaderProgram.cpp.obj.d
+build CMakeFiles/Minecraft_clone.dir/src/Shaders/ShaderProgram.cpp.obj: CXX_COMPILER__Minecraft_clone_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Shaders/ShaderProgram.cpp || cmake_object_order_depends_target_Minecraft_clone
+  DEP_FILE = CMakeFiles\Minecraft_clone.dir\src\Shaders\ShaderProgram.cpp.obj.d
   FLAGS = -g -std=gnu++20
   INCLUDES = -I"D:/cppprograme/objectorintedproject/project/Project test/vendor" -I"D:/cppprograme/objectorintedproject/project/Project test/include" -I"D:/cppprograme/objectorintedproject/project/Project test/vendor/glfw/include"
-  OBJECT_DIR = CMakeFiles\Project_test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Project_test.dir\src\Shaders
+  OBJECT_DIR = CMakeFiles\Minecraft_clone.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft_clone.dir\src\Shaders
 
-build CMakeFiles/Project_test.dir/vendor/glad.c.obj: C_COMPILER__Project_test_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/vendor/glad.c || cmake_object_order_depends_target_Project_test
-  DEP_FILE = CMakeFiles\Project_test.dir\vendor\glad.c.obj.d
+build CMakeFiles/Minecraft_clone.dir/vendor/glad.c.obj: C_COMPILER__Minecraft_clone_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/vendor/glad.c || cmake_object_order_depends_target_Minecraft_clone
+  DEP_FILE = CMakeFiles\Minecraft_clone.dir\vendor\glad.c.obj.d
   FLAGS = -g
   INCLUDES = -I"D:/cppprograme/objectorintedproject/project/Project test/vendor" -I"D:/cppprograme/objectorintedproject/project/Project test/include" -I"D:/cppprograme/objectorintedproject/project/Project test/vendor/glfw/include"
-  OBJECT_DIR = CMakeFiles\Project_test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Project_test.dir\vendor
+  OBJECT_DIR = CMakeFiles\Minecraft_clone.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft_clone.dir\vendor
+
+build CMakeFiles/Minecraft_clone.dir/src/Camera/Camera.cpp.obj: CXX_COMPILER__Minecraft_clone_Debug D$:/cppprograme/objectorintedproject/project/Project$ test/src/Camera/Camera.cpp || cmake_object_order_depends_target_Minecraft_clone
+  DEP_FILE = CMakeFiles\Minecraft_clone.dir\src\Camera\Camera.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -I"D:/cppprograme/objectorintedproject/project/Project test/vendor" -I"D:/cppprograme/objectorintedproject/project/Project test/include" -I"D:/cppprograme/objectorintedproject/project/Project test/vendor/glfw/include"
+  OBJECT_DIR = CMakeFiles\Minecraft_clone.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft_clone.dir\src\Camera
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Project_test
+# Link build statements for EXECUTABLE target Minecraft_clone
 
 
 #############################################
-# Link the executable Project_test.exe
+# Link the executable Minecraft_clone.exe
 
-build Project_test.exe: CXX_EXECUTABLE_LINKER__Project_test_Debug CMakeFiles/Project_test.dir/src/Ch4_CoordinateSystem/GoingTo3D.cpp.obj CMakeFiles/Project_test.dir/src/Shaders/Shader.cpp.obj CMakeFiles/Project_test.dir/src/Shaders/ShaderProgram.cpp.obj CMakeFiles/Project_test.dir/vendor/glad.c.obj | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
+build Minecraft_clone.exe: CXX_EXECUTABLE_LINKER__Minecraft_clone_Debug CMakeFiles/Minecraft_clone.dir/src/Ch4_CoordinateSystem/GoingTo3D.cpp.obj CMakeFiles/Minecraft_clone.dir/src/Shaders/Shader.cpp.obj CMakeFiles/Minecraft_clone.dir/src/Shaders/ShaderProgram.cpp.obj CMakeFiles/Minecraft_clone.dir/vendor/glad.c.obj CMakeFiles/Minecraft_clone.dir/src/Camera/Camera.cpp.obj | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
   FLAGS = -g
   LINK_LIBRARIES = vendor/glfw/src/libglfw3.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Project_test.dir
+  OBJECT_DIR = CMakeFiles\Minecraft_clone.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Project_test.exe
-  TARGET_IMPLIB = libProject_test.dll.a
-  TARGET_PDB = Project_test.exe.dbg
+  TARGET_FILE = Minecraft_clone.exe
+  TARGET_IMPLIB = libMinecraft_clone.dll.a
+  TARGET_PDB = Minecraft_clone.exe.dbg
 
 
 #############################################
@@ -2039,7 +2046,7 @@ build vendor/glfw/tests/install/strip: phony vendor/glfw/tests/CMakeFiles/instal
 # =============================================================================
 # Target aliases.
 
-build Project_test: phony Project_test.exe
+build Minecraft_clone: phony Minecraft_clone.exe
 
 build boing: phony vendor/glfw/examples/boing.exe
 
@@ -2173,7 +2180,7 @@ build windows.exe: phony vendor/glfw/tests/windows.exe
 #############################################
 # Folder: D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug
 
-build all: phony Project_test.exe vendor/glm/all vendor/glfw/all
+build all: phony Minecraft_clone.exe vendor/glm/all vendor/glfw/all
 
 # =============================================================================
 

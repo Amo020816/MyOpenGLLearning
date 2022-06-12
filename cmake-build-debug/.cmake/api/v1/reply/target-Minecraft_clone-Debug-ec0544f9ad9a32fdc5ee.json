@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Project_test.exe"
+			"path" : "Minecraft_clone.exe"
 		},
 		{
-			"path" : "Project_test.pdb"
+			"path" : "Minecraft_clone.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -29,11 +29,23 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
 				"file" : 0,
 				"line" : 23,
 				"parent" : 0
@@ -41,19 +53,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 25,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 26,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 27,
+				"line" : 24,
 				"parent" : 0
 			}
 		]
@@ -98,7 +98,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				4
 			]
 		},
 		{
@@ -137,7 +138,7 @@
 			"id" : "glfw::@31bd9730e6b8c71cc656"
 		}
 	],
-	"id" : "Project_test::@6890427a1f51a3e7e1df",
+	"id" : "Minecraft_clone::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -162,8 +163,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Project_test",
-	"nameOnDisk" : "Project_test.exe",
+	"name" : "Minecraft_clone",
+	"nameOnDisk" : "Minecraft_clone.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -178,7 +179,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -206,6 +208,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "vendor/glad.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Camera/Camera.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

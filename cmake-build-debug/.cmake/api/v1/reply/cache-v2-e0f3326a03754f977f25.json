@@ -1143,7 +1143,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Project_test"
+			"value" : "Minecraft_clone"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1728,6 +1728,42 @@
 			],
 			"type" : "BOOL",
 			"value" : "OFF"
+		},
+		{
+			"name" : "Minecraft_clone_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/cppprograme/objectorintedproject/project/Project test/cmake-build-debug"
+		},
+		{
+			"name" : "Minecraft_clone_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "Minecraft_clone_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/cppprograme/objectorintedproject/project/Project test"
 		},
 		{
 			"name" : "Project_test_BINARY_DIR",
