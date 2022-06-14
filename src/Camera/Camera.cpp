@@ -33,7 +33,7 @@ void Camera::InsMouseMovementCallBack(GLFWwindow *window, double xpos_in, double
   last_x = xpos;
   last_y = ypos;
 
-  const float sensitivity = 0.1f;
+  const float sensitivity = 0.05f;
   xoffset *= sensitivity;
   yoffset *= sensitivity;
 
